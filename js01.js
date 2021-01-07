@@ -117,7 +117,16 @@ function processArg(num03) {
 processed = processArg(6);
 
 //Stand in Line
+function nextInLine(arr, item) {
+    arr.push(item)
+    return item;
+}
 
+var testArr = [1,3,34,4,3,8,6];
+
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr,5));
+console.log("After: "+ JSON.stringify(testArr));
 
 console.log(changed);
 console.log(processed);
@@ -136,3 +145,65 @@ console.log("Created");
 console.log(quotes);
 console.log(myData);
 
+
+//Boolean values
+function WelcomeToBooleans() {
+    return true;
+}
+
+//conditional logic with if statement
+function ourTrueOrFalse(isItTrue) {
+    if(isItTrue){
+        return "The truth";
+    }
+    return "no it is false"; 
+}
+console.log(ourTrueOrFalse(false));
+
+function trueOrFalse(wasThatTrue) {
+
+    if (wasThatTrue) {
+        return "yes , true" ;
+    }
+    return "No , false";
+    
+}
+console.log(trueOrFalse(true));
+
+//Comparison with the equality operator
+function testEqual(val) {
+    if (val == 14) {
+        return "Equal";
+        
+    }
+    return "unequal";
+    
+}
+
+console.log(testEqual(43));
+
+//Comparison with the strict equality operator
+function strictEqual(val) {
+    if (val === 65) {
+        return "Equal";
+        
+    }
+    return "unequal";
+    
+}
+
+console.log(testEqual('65'));
+
+//Comparison with the strict inequality operator
+function testStrictNoEqual(val01) {
+    if (val01 !== 33) {
+        return  "strictly Not equal"
+        
+    }
+    return "equal";
+    
+}
+
+console.log(testStrictNoEqual(32));
+
+//Comparison with the logical AND operator
