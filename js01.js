@@ -42,6 +42,91 @@ var myArray01 = [ ["Array" , "nested"] , ["Another" , 32]] ; // nested array
 var myArray02 = [43,2,4];
 var myData = myArray02[0];  // reading array at index 0
 
+var ourArray02 = ["france" , "Portugal" , 32];
+ourArray02.push(["Germany", 54]);
+
+var myArray03 = [3,2,4];
+var removedFromMyArray03 = myArray03.pop();   //removedFromMyArray03 now equals 3, and myArray03 now equals [3,2]
+var removeTheFirstElement = myArray03.shift();  
+var unShiftedMyArray03 = myArray03.unshift("rea");   // add an element to the beginning of the array
+
+ function funstionWithArgs(a , b) {
+     console.log(a + b);
+    
+}
+
+funstionWithArgs(45 , 54);
+
+var myGlobal = 33; 
+
+function fun1() {
+  var oopsGlobal = 6;           //without the var keyword it becomes global variable automatically but now it is local
+    
+}
+
+function fun2() {
+    var output = "";
+    if(typeof myGlobal != "undefined"){
+        output += "myGlobal: " + myGlobal;
+    }
+    if (typeof oopsGlobal != "undefined"){
+        output += "oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+}
+
+fun1();
+fun2();    // the scope of the oppsGlobal is not global, therefore the output is undefined
+
+//Return a value from a function
+function minusSeven(num) {
+    return num - 7 ;
+    
+}
+console.log(minusSeven(52));
+
+function timesFive(num01) {
+    return num01 * 5 ;
+    
+}
+console.log(timesFive(4));
+
+//understanding undefined value returned from a function
+var sum = 0 ; 
+function addThree() {
+    sum += 8 ; 
+    }
+console.log(addThree());
+
+//Assignment with a return value
+var changed = 0; 
+
+function change(num02) {
+    return (num02 + 8 )/ 7 ;
+      
+}
+changed = change(43);
+
+var processed = 0 ; 
+
+function processArg(num03) {
+    return(num03 + 9) / 4 ; 
+    
+}
+
+processed = processArg(6);
+
+//Stand in Line
+
+
+console.log(changed);
+console.log(processed);
+console.log(myArray03);
+console.log(unShiftedMyArray03);           
+console.log(removeTheFirstElement);       // shift function removes the first element
+console.log(removedFromMyArray03);        // pop function removes the final element from the array
+console.log(myArray03);
+console.log(ourArray02);
 console.log(wordBlanks("pony", "small" , "is eating" , " slowly."));
 
 console.log(lastLetterOfFirstName);
