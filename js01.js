@@ -296,3 +296,115 @@ function sequesntialSizes(val06) {
 
 console.log(sequesntialSizes(45));
 
+//change chain of if-else to switch
+function chainToSwitch(val07) {
+    var answer = "";
+
+    switch (val07) {
+        case "bob":
+            answer = "Marley";
+            break;
+
+        case "eagle":
+            answer = "fly";
+            break;
+    
+        default:
+            answer = "You need to enter the answer correctly";
+            break;
+    }
+    return answer;
+    
+}
+console.log(chainToSwitch("bob"));
+
+//Returning boolean values from functions
+function isLess(a,b) {
+    if (a < b) {
+        return true;
+        
+    }else {
+        return false;
+    }
+    
+}
+
+console.log(isLess(10,44));
+
+//Can be written like this
+function isLess01(f,n) {
+    return f > n ;
+    
+}
+
+console.log(isLess01(35 , 3));
+
+//Returning early pattern from functions
+function dsTest(d, s) {
+   if (d < 0 || s < 0 ) {
+       return undefined;
+       
+   }
+
+    return Math.round(Math.pow(Math.sqrt(d)+ Math.sqrt(s), 4));
+}
+
+console.log(dsTest(3,6));
+
+//Counting cards
+var count = 0; 
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;    
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+    
+        default:
+
+            break;
+    }
+    var holdbet = 'hold';
+    if (count > 0 ) {
+        holdbet = 'Bet'
+        
+    }
+    return count + "" + holdbet;
+    
+}
+
+cc(3); cc('K'); cc('2');
+console.log(cc(7));
+
+//Build JavaScript objects
+var myFish = {
+    "name" : "Graham",
+    "fins" : 8 , 
+    "friends" : ["everything!"] 
+} ;
+
+//Accessing object properties with dot notation
+var fishFinder = myFish.fins;
+
+//Accessing object properties with Bracket notation
+var fishFinder = myFish["friends"];
+
+//Accessing object properties with variables
+var fisheries = "name";
+var fisher = myFish[fisheries];
+
+console.log(fisher);
+
+//updating object properties
+
+
