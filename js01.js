@@ -406,5 +406,76 @@ var fisher = myFish[fisheries];
 console.log(fisher);
 
 //updating object properties
+myFish.fins = 9 ;
+
+//Add new properties to an object
+myFish["tail"] = 1 ; 
+
+//delete properties from an object
+delete myFish.tail;
+
+//using objects for lookups
+function phoneticLookup(val08) {
+    var result = "";
+
+    var lookup = {
+        "sigma" : "charls", 
+        "kate" : "brave"
+    };
+    result = lookup[val08];
+    return result;    
+}
+
+console.log(phoneticLookup("kate"));
+
+//testing objects for properties
+var myObj = {
+    gift : "loop",
+    platinuim : "brand"
+};
 
 
+function checkObj(checkProp) {
+
+  if ( myObj.hasOwnProperty(checkProp)) {
+      return myObj[checkProp];
+  } else {
+      return "Not Found"
+  }
+    
+}
+
+console.log(checkObj("gama")); 
+
+//Manipulating complex objects
+var myMusic = [          // An array consisting of two objects
+    {
+    "artist" : "Bruce Springsteen", 
+    "release_year" : 1968
+    } , 
+    {
+    "artist" : "AC/DC",
+    "title" : "You've been hit by a thunderstruck"
+    }
+]
+
+//Accessing nested objects
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside" : {
+            "trunk": "jack"
+        }
+
+    }
+
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+console.log(gloveBoxContents)
+
+//Accessing Nested Arrays
