@@ -182,7 +182,7 @@ function testEqual(val) {
 
 console.log(testEqual(43));
 
-//Comparison with the strict equality operator
+//Comparison with the strict equality operator makes sure the types are equal
 function strictEqual(val) {
     if (val === 65) {
         return "Equal";
@@ -207,3 +207,92 @@ function testStrictNoEqual(val01) {
 console.log(testStrictNoEqual(32));
 
 //Comparison with the logical AND operator
+function testLogicalAND(val02) {
+    if(val02 <34 && val02 >= 56) {
+        return "done"
+    }
+
+    return "undone"
+    
+}
+
+console.log(testLogicalAND(58))
+
+//else if
+function orderMyLogic(val03) {
+    if (val03 < 43) {
+        return "less"
+    } else if(val03 < 23){
+        return "Enhanced"
+        
+    }else {
+        return "Rotate"
+    }
+    
+}
+
+//Switch statement
+function caseInSwitch(val04) {
+    var answer = "";
+    switch(val04){
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "Beta";
+            break;
+        case 3:
+            answer = "Sigma";
+            break;
+        
+    }
+
+    return answer;
+    
+}
+
+console.log(caseInSwitch(3)); 
+
+//Default option in Swith Statement
+function SwitchOfStuff(val05) {
+    var answer = "";
+    switch (val05) {
+        case "a":
+            answer = "appricot";
+            break;
+        case "t":
+            answer = "tangerine";
+            break;
+        default:
+            answer = "stuff";
+            break;
+    } 
+    return answer;
+}
+
+console.log(SwitchOfStuff("t"));
+
+//Multiple identical options in Switch statements
+function sequesntialSizes(val06) {
+    var answer = "";
+    switch (val06) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "mid";
+            break;
+    
+        default:
+            answer = "Please enter the correct value";
+            break;
+    }
+    return answer;
+}
+
+console.log(sequesntialSizes(45));
+
